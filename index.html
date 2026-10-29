@@ -27,7 +27,7 @@
       <a href="#productos">Productos</a>
       <a href="#interview">Nuestros clientes</a>
       <a href="#visit">Visítanos</a>
-      <a class="nav-cta" href="#visit">Agenda una visita ↗</a>
+      <a class="nav-cta" href="#contacto">Cuéntanos de tu vivero ↗</a>
     </nav>
   </header>
 
@@ -140,8 +140,46 @@
         <div class="eyebrow">Las puertas están abiertas</div>
         <h2 class="display">Ven a conocer<br>nuestro cultivo.</h2>
         <p>Recorre los cultivos, conoce a quienes los cuidan y disfruta de una finca familiar en el corazón de Boyacá. Nos encantará recibirte.</p>
-        <a class="btn btn-primary" href="mailto:hola@campoazul.co">Agenda tu visita ↗</a>
+        <a class="btn btn-primary" href="#contacto">Cuéntanos de tu vivero ↗</a>
       </div>
+    </section>
+
+    <section id="contacto" class="section contact reveal" aria-labelledby="contact-title">
+      <div class="contact-intro">
+        <div class="eyebrow">Para clientes y productores</div>
+        <h2 id="contact-title" class="display">Cuéntanos de tu vivero.</h2>
+        <p>Comparte tus datos y nuestro equipo se pondrá en contacto contigo.</p>
+      </div>
+      <form class="contact-form" action="https://formsubmit.co/julianaguzmanmurcia@gmail.com" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Nueva solicitud de cliente — Campo Azul">
+        <input type="hidden" name="_template" value="table">
+        <div class="form-trap" aria-hidden="true">
+          <label for="contact-website">Deja este campo vacío</label>
+          <input id="contact-website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+          <label for="client-name">Nombre</label>
+          <input id="client-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+        <div class="form-field">
+          <label for="client-email">Correo electrónico</label>
+          <input id="client-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="nursery-location">Ubicación del vivero</label>
+          <input id="nursery-location" name="location" type="text" placeholder="Municipio, departamento" autocomplete="address-level2" maxlength="180" required>
+        </div>
+        <div class="form-field form-field-wide">
+          <label for="nursery-description">Descripción del vivero</label>
+          <textarea id="nursery-description" name="nursery_description" rows="5" maxlength="2000" placeholder="Cuéntanos qué cultivas y qué te gustaría compartir." required></textarea>
+        </div>
+        <label class="contact-consent">
+          <input type="checkbox" name="consent" value="Autorizo el uso de mis datos para responder mi solicitud" required>
+          <span>Autorizo a Campo Azul a usar estos datos para responder mi solicitud. El formulario se procesa mediante FormSubmit.</span>
+        </label>
+        <button class="btn btn-primary contact-submit" type="submit">Enviar solicitud ↗</button>
+      </form>
     </section>
   </main>
 

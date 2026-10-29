@@ -189,6 +189,40 @@ h1 { font-size: clamp(4.2rem, 9vw, 8.8rem); line-height: .83; max-width: 780px; 
 .visit-copy h2 { font-size: clamp(3rem, 6vw, 6rem); line-height: .84; margin-bottom: 25px; }
 .visit-copy p { max-width: 390px; color: var(--muted); margin-bottom: 27px; }
 
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: clamp(32px, 7vw, 100px);
+  background: var(--mint);
+}
+.contact-intro .eyebrow { color: var(--deep); }
+.contact-intro h2 { max-width: 580px; margin-bottom: 18px; }
+.contact-intro p { max-width: 420px; color: var(--muted); }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { display: grid; gap: 8px; }
+.form-field-wide, .contact-consent { grid-column: 1 / -1; }
+.form-field label { color: var(--deep); font-size: .8rem; font-weight: 800; }
+.contact-form input:not([type="checkbox"]), .contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 15px;
+  color: var(--ink);
+  background: var(--cream);
+  font: inherit;
+}
+.contact-form textarea { min-height: 145px; resize: vertical; }
+.contact-form input:focus-visible, .contact-form textarea:focus-visible {
+  outline: 3px solid rgba(25,94,138,.28);
+  outline-offset: 2px;
+  border-color: var(--blueberry);
+}
+.contact-consent { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); font-size: .78rem; }
+.contact-consent input { flex: 0 0 auto; width: 17px; height: 17px; margin: 2px 0 0; accent-color: var(--blueberry); }
+.contact-submit { justify-self: start; border: 0; cursor: pointer; }
+.form-trap { display: none; }
+
 footer { background: var(--deep); color: rgba(255,255,255,.7); padding: 32px clamp(22px, 8vw, 120px); display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: .75rem; }
 footer .brand { color: white; font-size: 1.15rem; }
 .socials { display: flex; gap: 18px; font-weight: 700; color: white; }
@@ -217,7 +251,9 @@ footer .brand { color: white; font-size: 1.15rem; }
   .hero { min-height: 680px; padding-top: 150px; }
   .promo { grid-template-columns: 1fr; }
   .hero-note { gap: 16px; flex-wrap: wrap; margin-top: 55px; }
-  .section-head, .story, .interview, .visit { grid-template-columns: 1fr; display: grid; }
+  .section-head, .story, .interview, .visit, .contact { grid-template-columns: 1fr; display: grid; }
+  .contact-form { grid-template-columns: 1fr; }
+  .form-field-wide, .contact-consent { grid-column: auto; }
   .mission-vision-grid { grid-template-columns: 1fr; }
   .section-head { display: flex; flex-direction: column; align-items: flex-start; }
   .story-photo { min-height: 370px; order: 2; }
